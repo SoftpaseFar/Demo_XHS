@@ -18,4 +18,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 - 下载对应SDK Tools时：SDK Toolsit Android Emulator. Android SDK Platform-Tools、底部三个Layout Inspector选项
 - 创建模拟器时：Device Manager > Create Device 设备类型选择Phone，屏幕尺寸随便选系统镜像选择Sv2选项然后一直next就可以
 
+### 安装依赖
+- 安装js依赖：npm i
+- 安装原生依赖：gradle sync
+
 ### 待更新
