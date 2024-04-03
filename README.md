@@ -1,6 +1,6 @@
 # Demo_XHS
 
-## 环境准备
+# 环境准备
 MacOS、Android【<a href="https://reactnative.cn/docs/environment-setup" style="color: orange;">开发环境搭建指南</a>】
 
 ## 添加环境变量
@@ -45,4 +45,11 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 ## Babel
 为了兼容浏览器出现的翻译器，在工程的babel.config.js中配置【待更新】
 
+# 相关知识
+
+## CSS_Flex布局
+- 横向和纵向布局：direction
+- 主轴和交叉轴对齐：justifyContent、alignltems
+- 元素的放大和缩小：flexGrow、flexShrink
+- 
 ## 待更新
