@@ -51,5 +51,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 - 横向和纵向布局：direction
 - 主轴和交叉轴对齐：justifyContent、alignltems
 - 元素的放大和缩小：flexGrow、flexShrink
-- 
+
 ## 待更新
