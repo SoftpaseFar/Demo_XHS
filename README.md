@@ -52,4 +52,12 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 - 主轴和交叉轴对齐：justifyContent、alignltems
 - 元素的放大和缩小：flexGrow、flexShrink
 
+## 安装nrm，切换taobao源
+```bash
+npm i -g nrm
+nrm Is
+nrm add taobao https://registry.npm.taobao.org/
+nrm use taobao nrm test taobao
+```
+
 ## 待更新
