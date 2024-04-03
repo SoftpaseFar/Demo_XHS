@@ -18,9 +18,13 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 - 下载对应SDK Tools时：SDK Toolsit Android Emulator. Android SDK Platform-Tools、底部三个Layout Inspector选项
 - 创建模拟器时：Device Manager > Create Device 设备类型选择Phone，屏幕尺寸随便选系统镜像选择Sv2选项然后一直next就可以
 
+## 初始化项目
+- 初始化项目(推荐)：прх react-native init Demo_XHS
+- 初始化项目(指定RN版本)：npx react-native init Demo_XHS -version x.xx.x
+
 ## 安装依赖
 - 安装JS依赖：npm i
-- 安装原生依赖：gradle sync
+- 安装原生依赖：gradle sync 注意：需要安装JDK11
 
 ## 常用命令
 ```bash
