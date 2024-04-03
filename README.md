@@ -32,4 +32,14 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 运行设备：npm run android
 ```
 
+### ES6新特性
+- 变量申明 let
+- 对象属性简写
+- Object.assign对象合并
+- 解构赋值
+- 展开运算符
+- 模板字符串
+ Promisee
+- import#lexport
+
 ## 待更新
