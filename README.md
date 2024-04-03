@@ -42,4 +42,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
  Promisee
 - import#lexport
 
+## Babel
+为了兼容浏览器出现的翻译器，在工程的babel.config.js中配置【待更新】
+
 ## 待更新
