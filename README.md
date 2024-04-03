@@ -57,7 +57,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 npm i -g nrm
 nrm Is
 nrm add taobao https://registry.npm.taobao.org/
-nrm use taobao nrm test taobao
+nrm use taobao 
+nrm test taobao
 ```
 
 ## 待更新
