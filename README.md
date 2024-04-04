@@ -61,4 +61,47 @@ nrm use taobao
 nrm test taobao
 ```
 
+## adb命令真机测试
+- USB链接 adb devices 可以显示
+- WIFI链接
+  - adb connect IP:端口(默认5555) 
+  - 断开 adb disconnect IP:端口
+- adb常用操作
+  - 查看设备 adb devices
+  - 停止 adb kill-server
+  - 启动 adb start-server
+  - 端口映射 adb reverse tcp:8080 tcp:8080
+  - 进入沙盒 adb shell
+  - push文件到手机 adb push 文件路径 手机目标路径(比如/sdcard/)
+  - pull文件到电脑 adb pull 手机文件 电脑目录
+
+## UI包括 StatusBar状态栏、ActionBar标题栏、ContentView内容、Navigation导航
+## RN中页面跳转默认是一个Activity 也可以有多个
+## 原生的dialog RN中是Modal<-Window
+## 常需要修改的原生文件
+- 配置
+  - Manifest 权限、第三方注册组件元数据、等等
+  - gradle 一般是app下的 签名、依赖、等等
+- 应用
+  - MainActivity 比如科大讯飞模块需要一些初始化时
+  - strings.xml 应用名称等
+  - mipmap 图标
+- 桥接
+  - ReactPackage, ReactModule, ViewManager 等等
+
+## RN和原生组价的对应关系
+| React Native 组件 | Android 对应组件                          | iOS 对应组件                |
+|-------------------|----------------------------------------|--------------------------|
+| `<View>`          | `android.view.View`                    | `UIView`                 |
+| `<Text>`          | `android.widget.TextView`              | `UITextView`             |
+| `<Image>`         | `android.widget.ImageView`            | `UIImageView`           |
+| `<ScrollView>`    | `android.widget.ScrollView`            | `UIScrollView`           |
+| `<TextInput>`     | `android.widget.EditText`              | `UITextField`           |
+| `<Button>`        | `android.widget.Button`                | `UIButton`               |
+| `<Switch>`        | `android.widget.Switch`                | `UISwitch`               |
+| `<FlatList>`      | `androidx.recyclerview.widget.RecyclerView` | `UITableView`       |
+| `<Modal>`         | `android.app.Dialog`                   | `UIViewController`       |
+| `<ActivityIndicator>` | `android.widget.ProgressBar`        | `UIActivityIndicatorView` |
+| `<Picker>`        | `android.widget.Spinner`               | `UIPickerView`           |
+
 ## 待更新
