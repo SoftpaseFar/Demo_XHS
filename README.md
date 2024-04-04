@@ -119,24 +119,23 @@ nrm test taobao
 - `/node_modules`：存放所有的项目依赖库。通常不会直接修改这里的文件，也不会将其加入版本控制系统。
 
 ## 构建通用源码目录结构
-- > 原则：
+> 原则：
   - > 职责清晰：每个目录划分都规定具体的职责
   - > 功能全面：包含ui、数据、网络、常量、工具、环境等
   - > 独立解偶：一级目录之间没有职责交叉和耦合
-- > 目录树
-
-- src
-- ├── apis
-- ├── assets
-- ├── components
-- ├── constants
-- ├── env
-- ├── hooks
-- ├── modules
-- ├── stores
-- ├── theme
-- │   └── test.js
-- └── utils
+> 目录树
+  - src
+  - ├── apis
+  - ├── assets
+  - ├── components
+  - ├── constants
+  - ├── env
+  - ├── hooks
+  - ├── modules
+  - ├── stores
+  - ├── theme
+  - │   └── test.js
+  - └── utils
 
 
 
