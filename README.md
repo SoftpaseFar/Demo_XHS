@@ -104,4 +104,9 @@ nrm test taobao
 | `<ActivityIndicator>` | `android.widget.ProgressBar`        | `UIActivityIndicatorView` |
 | `<Picker>`        | `android.widget.Spinner`               | `UIPickerView`           |
 
+## RN常见的热修复框架
+- PUSHY 国内
+- App Center 国外的比较慢 不过比PUSHY强大
+
+
 ## 待更新
