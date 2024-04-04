@@ -123,6 +123,19 @@ nrm test taobao
   - > 职责清晰：每个目录划分都规定具体的职责
   - > 功能全面：包含ui、数据、网络、常量、工具、环境等
   - > 独立解偶：一级目录之间没有职责交叉和耦合
+- > 目录树
+  src
+  ├── apis
+  ├── assets
+  ├── components
+  ├── constants
+  ├── env
+  ├── hooks
+  ├── modules
+  ├── stores
+  ├── theme
+  │   └── test.js
+  └── utils
 
 
 
