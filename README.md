@@ -125,18 +125,18 @@ nrm test taobao
   - > 独立解偶：一级目录之间没有职责交叉和耦合
 - > 目录树
 
-src
-├── apis
-├── assets
-├── components
-├── constants
-├── env
-├── hooks
-├── modules
-├── stores
-├── theme
-│   └── test.js
-└── utils
+- src
+- ├── apis
+- ├── assets
+- ├── components
+- ├── constants
+- ├── env
+- ├── hooks
+- ├── modules
+- ├── stores
+- ├── theme
+- │   └── test.js
+- └── utils
 
 
 
