@@ -134,7 +134,7 @@ nrm test taobao
   - ├── modules
   - ├── stores
   - ├── theme
-  - │   └── test.js
+  - │       └── test.js
   - └── utils
 
 
