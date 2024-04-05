@@ -137,6 +137,38 @@ nrm test taobao
   - │       └── test.js
   - └── utils
 
+## package.json 全局大管家文件
+- 基础字段： name、version、private
+- 自定义脚本：scripts，build.gradle中,例如：
+  ```shell
+  #！Android原生配置
+  flavorDimensions "type"
+  productFlavors {
+  dev {
+    resValue（"string"，"app_name"，"测试包"）
+    }
+  prd {
+    resValue（"string"，"app_name"，"生产包"）
+    }
+  }
+  ```
+  ```shell
+  #！RN的package.json中scripts调用
+  "scripts": {
+    "android_devDebug": "react-native run-android -variant=devDebug",
+    "android_prdDebug": "react-native run-android -variant=prdDebug",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint":"eslint ."
+  }
+  ```
+- 包依赖：dependencies、devDependencies
+  ```shell
+  安装到dependencies：npm i 包名
+  安装到devDependencies：npm i --save-dev 包名
+  ```
+## ds
 
 
 
