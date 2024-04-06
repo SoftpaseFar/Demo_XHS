@@ -168,7 +168,25 @@ nrm test taobao
   安装到dependencies：npm i 包名
   安装到devDependencies：npm i --save-dev 包名
   ```
-## ds
+## import/export
+## class组件和函数式组件
+- class组件
+  - 有状态（state），每次都是修改的同一个状态
+  - 基于生命周期的管理
+  - 面向对象的好处：易于理解，适合新手
+- 函数式组件(用的多，90%多)
+  - 无状态，每次刷新都是生成一个新的状态
+  - 基于状态变化的管理
+  - 函数式的好处：简洁，模板代码少，易于复用(基于自定义hock)
+  > 常用hock：useState, useEffect, useRef, useWindowDimension. useColorScheme
+
+## JSX特性
+- 拆分渲染
+- 内联样式与样式表、样式组合 StyleSheet
+- 条件渲染、三元表达式、列表渲染、数组渲染等
+> 重启页面，命令行按r
+
+
 
 
 

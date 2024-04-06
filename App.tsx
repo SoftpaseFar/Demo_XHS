@@ -5,9 +5,11 @@ import {
   StyleSheet,
   useColorScheme,
   View,
+  Text,
 } from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
+import TimerView from './src/components/timer';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -23,9 +25,8 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <View style={styles.container}>
-        <View style={styles.child} />
-        <View style={styles.child} />
-        <View style={styles.child} />
+        <Text style={styles.txt}>RN实现计时器</Text>
+        <TimerView/>
       </View>
     </SafeAreaView>
   );
@@ -35,13 +36,15 @@ const styles = StyleSheet.create({
   container: {
     display: 'flex',
     flexDirection: 'column',
+    width: '100%' ,
+    height: '100%' ,
+    alignItems: 'center' ,
   },
-  child: {
-    width: 60,
-    height: 60,
-    backgroundColor: 'red',
-    marginRight: 10,
-    marginTop: 10,
+  txt:{
+    width: '100%' ,
+    fontSize: 24 ,
+    color: 'blue' ,
+    textAlign: 'center' ,
   },
 });
 
