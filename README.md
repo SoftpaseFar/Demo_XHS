@@ -187,7 +187,28 @@ nrm test taobao
 > 重启页面，命令行按r
 
 
-
-
+# 基础组件
+## 常用组件
+- View
+- Text
+  - 字体属性: fontSize, fontFamily, fontWeight
+  - 行数以及修饰模式：numberOfLines、ellipsizeMode
+  - 是否可选中以及选中色号：selectable、selectionColor
+  - 点击和长按：onPress、onLongPress
+  - 跟随系统字号：allowFontScaling
+  - 文字嵌套，注意在内部的Text有些属性不生效
+  - 文本对其：textAlign、textAlignVertical
+  - 文本装饰: textDecorationStyle, textDecorationLine
+  - 文字阴影：textShadowColor、textShadowOffset、textShadowRadius一起使用
+- Image
+  - 图片源的两种类型：source 本地和网络
+  - 缩放模式: resizeMode
+  - blurRadius：模糊设置
+  - 占位图片: defaultSource
+  - 渐入动画时间：fadeDuration
+  - 加载成功和加载失败：onLoad、onError
+  - 加载开始与加载结束：onLoadStart、onLoadEnd
+  - 着色：tintColor 例如图标根据场景可以设置不同的颜色
+  - api: Image.getSize() • Image.prefetch()
 
 ## 待更新
