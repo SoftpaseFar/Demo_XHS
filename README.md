@@ -233,5 +233,20 @@ nrm test taobao
     - next
     - search
     - send
+  - 内容回调: onChangeflonChangeText
+  - 选中相关：selection、selectionColor、selectTextOnFocus
+  - 对齐方式：textAlign和textAlignVertical
+  - 安全模式：secureTextEntry，不能和multiline一块使用
+- TouchableOpacity最好用的点击组件
+- TouchableHighlight使用略显麻烦的点击组件
+- TouchbaleWithoutFeedback几乎不用的
+- Button
+- ScrolView基础滚动组件
+- FlatList高性能列表组件
+- SectionList多类型分组列表
+- RefreshControl下拉刷新【上拉加载是列表的属性】
+- Modal自定义弹窗
+- StatusBar适配状态栏
+- Switch开关切换
 
 ## 待更新
