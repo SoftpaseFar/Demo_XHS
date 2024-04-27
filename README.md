@@ -227,6 +227,11 @@ nrm test taobao
     - numeric
     - email-address
     - phone-pad
-  
+  - 确定键配置：returnKeyType
+    - done
+    - go
+    - next
+    - search
+    - send
 
 ## 待更新
