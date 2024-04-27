@@ -210,5 +210,8 @@ nrm test taobao
   - 加载开始与加载结束：onLoadStart、onLoadEnd
   - 着色：tintColor 例如图标根据场景可以设置不同的颜色
   - api: Image.getSize() • Image.prefetch()
+- ImageBackground: View和Image的结合
+  - style#limageStyle
+  - ref和imageRef
 
 ## 待更新
