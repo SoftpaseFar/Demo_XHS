@@ -213,5 +213,20 @@ nrm test taobao
 - ImageBackground: View和Image的结合
   - style#limageStyle
   - ref和imageRef
+- TextInput
+  - 字体样式：和Text一致
+  - 自动聚焦：autoFocus和focus()
+  - 自动失焦：blurOnSubmit和blur()
+  - 隐藏光标：caretHidden
+  - 默认输入：defaultValue
+  - 可编辑性：editable
+  - 键盘类型：keyboardType (Android和IOS都支持的)
+    - default
+    - number-pad
+    - decimal-pad
+    - numeric
+    - email-address
+    - phone-pad
+  
 
 ## 待更新
