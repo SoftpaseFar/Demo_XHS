@@ -260,6 +260,26 @@ nrm test taobao
   - console.group() console.groupEnd() 浏览器效果更好
 - Dimensions/useWindowDimensions：适配屏幕宽高
 - Platform：轻松获取平台属性
+ - console.log(Platform.OS) 查看当前所属平台
+ - console.log(Platform.Version) 比如Android版本号
+ - console.log(Platform.constants) 提供设备底层信息
+ - console.log(Platform.isPad)
+ - console.log(Platform.isTV)
+ - Platform.select
+     ```JavaScript
+     const style = Platform.select({
+     andrid: {
+       marginTop: 20,
+     },
+     ios: {
+       marginTop: 0,
+     },
+     default: {
+       marginTop: 10,
+     });
+     console. log(style);
+     // Andrid下输出：("marginTop": 20)
+     ```
 - StyleSheet： 灵活构建样式表
 - Linking：一个api帮你省掉50行代码
 - PixelRatio：像素比例工具
