@@ -187,7 +187,7 @@ nrm test taobao
 > 重启页面，命令行按r
 
 
-# 基础组件
+# RN基础
 ## 常用组件
 - View
 - Text
@@ -248,5 +248,26 @@ nrm test taobao
 - Modal自定义弹窗
 - StatusBar适配状态栏
 - Switch开关切换
+## 常用API
+- Alert/console：开发周期的调试工具
+  - alert()要区别Alert.alertl
+  - console日志输出分级 console.info()、console.debug()、console.warn()、console.error()
+  - console.log()
+    - 字符串模板 %s、%d、%o 【字符串模板更加方便】
+    - %c指定输出样式 color:orange font-size:x-large, x-medium, x-small 浏览器可以看到效果 命令行没效果
+    - 可以打印组件树
+  - console.table() 浏览器可以看到效果
+  - console.group() console.groupEnd() 浏览器效果更好
+- Dimensions/useWindowDimensions：适配屏幕宽高
+- Platform：轻松获取平台属性
+- StyleSheet： 灵活构建样式表
+- Linking：一个api帮你省掉50行代码
+- PixelRatio：像素比例工具
+- BackHandler：针对安卓返回键的适配不再是难题
+- PermissionAndroid：一个api帮你解决原生动态权限问题
+- Vibration： 简单好用的震动交互
+- ToastAndroid： 安卓平台的提示
+- transform：矩阵变换的伪3D效果
+- Keyboard：键盘操作有神器
 
 ## 待更新
