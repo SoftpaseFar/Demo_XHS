@@ -281,10 +281,37 @@ nrm test taobao
      // Andrid下输出：("marginTop": 20)
      ```
 - StyleSheet： 灵活构建样式表
+  - StyleSheet.compose()
+  - StyleSheet.flatten() 属性重复，后边的会覆盖前边的
+  - StyleSheet.absoluteFill() 布满全清使用，实际想布满全屏需要写一串代码，这个直接一句话
+  - StyleSheet.hairlineWidth 头发丝尺寸 1个尺寸 比如分割线
 - Linking：一个api帮你省掉50行代码
+  - 打开链接：openURL()、canOpenURL() 网页链接、地图定位geo:经,纬度、拨打电话tel:电话号码、发送短信smsto:例如10086、发送邮件mailto:邮箱地址、应用跳转
+  - Linking.openSettings() 跳转到当前应用的设置页面
+  - 安卓隐式跳转：Linking.sendIntent()
+  - 狭取初始化url:getInitialURL() 这啥玩意？^*^
 - PixelRatio：像素比例工具
+  - PixelRatio.roundToNearestPixel() 由于像素比舍入会空出一个像素 这样可以自动计算防止空出一个像素产生难以捉摸的问题
 - BackHandler：针对安卓返回键的适配不再是难题
-- PermissionAndroid：一个api帮你解决原生动态权限问题
+  - 添加监听：BackHandler.addEventListener()
+  - 移除监听: BackHandler.removeEventListener()
+  - 退出应用：BackHandler.exitApp() 
+  - 社区hook： @react-native-community/hooks 省掉上述固定流程，直接写逻辑
+    ```shell
+    npm install @react-native-community/hooks
+    import {
+      useBackHandler
+    } from '@react-native-community/hooks'
+    useBackHandler(()=>{
+      return true
+    })
+    ```
+- PermissionAndroid：一个api帮你解决Android原生动态权限问题
+  > 切记原生manifest注册权限
+  - 属性存在PermissionAndroid.PERMISSIONS中
+  - 检查权限：PermissionsAndroid.check()
+  - 申请权限：PermissionsAndroid.request()
+  - 社情多个权限: PermissionsAndroid.requestMultiple()
 - Vibration： 简单好用的震动交互
 - ToastAndroid： 安卓平台的提示
 - transform：矩阵变换的伪3D效果
