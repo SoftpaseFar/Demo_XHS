@@ -312,8 +312,14 @@ nrm test taobao
   - 检查权限：PermissionsAndroid.check()
   - 申请权限：PermissionsAndroid.request()
   - 社情多个权限: PermissionsAndroid.requestMultiple()
-- Vibration： 简单好用的震动交互
-- ToastAndroid： 安卓平台的提示
+- Vibration： 简单好用的震动交互 默认400ms IOS单次震动只能400ms
+  - 原生申明权限：android.permission.VIBRATE 
+  - Vibration.vibrate() 发起震动
+  - Vibration.vibrate([100, 500, 200, 500】); 震动时间模式 Android中停100震500，停200震500
+  - Vibration.vibrate([100, 200, 300, 400】); 震动时间模式 IOS中停100震400，停200震400，停300震400，停400震400
+  - Vibration.vibrate([100, 200, 300, 400】，true); 循环震动
+  - Vibration.cancel() 停止震动
+- ToastAndroid： 安卓平台的提示 【逐渐被弱化】 弹出提示：ToastAndroid.show()
 - transform：矩阵变换的伪3D效果
 - Keyboard：键盘操作有神器
 
