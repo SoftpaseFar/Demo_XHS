@@ -491,7 +491,51 @@ return (<View>
  }
  ```
  - 四种组合公动画
-    
+   - Animated.parallel() 并发、Animated.sequence() 序列、Animated.stagger() 有序/交错、Animated.delay() 延迟
+ - 跟随动画延迟难题：传统的会有延迟，因为是异步，需要重新渲染页面，而动画方式直接桥接原生底层 【待补充】
+ - 布局动画 LayoutAnimation 简单 性能高
+   - 开启 index.js
+   ```javascript
+   import {AppRegistry, UIManager, Platform} from 'react-native';
+   import App from './App';
+   import {name as appName} from './app.json';
+   
+   if (Platform.OS === 'android') {
+     if (UIManager.setLayoutAnimationEnabledExperimental) {
+       console.log('enable …');
+       UIManager.setLayoutAnimationEnabledExperimental(true);
+     }
+   }
+   
+   AppRegistryregisterComponentt(appName, () => App);
+   ```
+   - 示例
+   ```javascript
+   export default () => {
+     const [showView, setShowView] = useState(false);
+     return (
+       <View>
+         <Button title='按钮' onPress={() => {
+           LayoutAnimation.configureNext(
+             LayoutAnimation.Presets.linear,
+             // LayoutAnimation.Presets.easeInEaseOut,
+             // LayoutAnimation.Presets.spring,
+             () => {
+               console.log('动画结束');
+             },
+             () => {
+               console.log('动画异常');
+             }
+           );
+           // LayoutAnimationspringg(),
+           setShowView(true);
+         }} />
+         {showView && <view style={styles.view} />}
+   
+       </View>
+     );
+   }
+   ```
 
 
 
