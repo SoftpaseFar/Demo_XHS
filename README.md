@@ -460,20 +460,16 @@ return (<View>
         - delay（延迟）：延迟后启动动画，默认为0
   - Animated.timing（）：时间动画函数
     - easing：时间动画函数
-      - 四种内置动画
-        • back
-        • bounce
-        • ease
-        • elastic
-      - 三种标准函数
-        • linear
-        • quad
-        • cubic
-      - 四种补充函数
-        • bezier
-        • circle
-        • sin
-        • exp
+      - 四种内置动画 back 回拉、bounce、ease、elastic
+      ```javascirpt
+      easing: Easing.back(3),
+      easing: Easingeasee,
+      easing: Easing.bouncee,
+      elasticeasing: Easing.elastic(1),
+      ```
+      - 三种标准函数 linear：一次方函数、quad： 二次方函数、cubic：三次方函数
+      - 四种补充函数 ![Easing.bezier (0,0,1,1)](https://ccubicbezier.com/)、Easing.circle 环形、Easing.sin 正弦、Easing.exp 指数
+  
 
 
 ## 待更新
