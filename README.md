@@ -468,7 +468,7 @@ return (<View>
       elasticeasing: Easing.elastic(1),
       ```
       - 三种标准函数 linear：一次方函数、quad： 二次方函数、cubic：三次方函数
-      - 四种补充函数 ![Easing.bezier (0,0,1,1)](https://ccubicbezier.com/)、Easing.circle 环形、Easing.sin 正弦、Easing.exp 指数
+      - 四种补充函数 [Easing.bezier (0,0,1,1)](https://ccubicbezier.com/)、Easing.circle 环形、Easing.sin 正弦、Easing.exp 指数
   
 
 
