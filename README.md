@@ -324,6 +324,26 @@ nrm test taobao
 - Keyboard：键盘操作有神器
 ## 动画系统
 > 四大动画类型：平移、旋转、缩放、渐变
+- 需要用 <Animated.View></Animated.View> 示例：
+  ```javascript
+     export default () => {
+       const marginLeft = useRef(new Animated.Value).current;
+       return (<View>
+         <Button title='按钮' onPress={() => {
+           Animated.timing(marginLeft, {
+             toValue: marginLeft,
+             duration: 200,
+             useNativDriverr: false
+           }).start();
+         }} />
+         <Animated.View
+           style={[styles.view,
+             { marginLeft: marginLeft }
+           ]}
+         />
+       </View>);
+     }
+  ```
 
 
 
