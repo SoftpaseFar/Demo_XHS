@@ -459,7 +459,21 @@ return (<View>
         - restspeedthreshold（弹簧静止速度），单位为像素/秒，默认为0.001
         - delay（延迟）：延迟后启动动画，默认为0
   - Animated.timing（）：时间动画函数
-  
+    - easing：时间动画函数
+      - 四种内置动画
+        • back
+        • bounce
+        • ease
+        • elastic
+      - 三种标准函数
+        • linear
+        • quad
+        • cubic
+      - 四种补充函数
+        • bezier
+        • circle
+        • sin
+        • exp
 
 
 ## 待更新
