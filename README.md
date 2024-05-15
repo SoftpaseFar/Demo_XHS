@@ -536,6 +536,7 @@ return (<View>
      );
    }
    ```
+## TypeScript
 
 
 
