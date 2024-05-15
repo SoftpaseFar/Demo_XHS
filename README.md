@@ -459,7 +459,7 @@ return (<View>
         - restspeedthreshold（弹簧静止速度），单位为像素/秒，默认为0.001
         - delay（延迟）：延迟后启动动画，默认为0
   - Animated.timing（）：时间动画函数
-    - easing：时间动画函数
+      - easing：时间动画函数
       - 四种内置动画 back 回拉、bounce、ease、elastic
       ```javascirpt
       easing: Easing.back(3),
@@ -470,7 +470,29 @@ return (<View>
       - 三种标准函数 linear：一次方函数、quad： 二次方函数、cubic：三次方函数
       - 四种补充函数 [Easing.bezier (0,0,1,1)](https://cubic-bezier.com/)、Easing.circle 环形、Easing.sin 正弦、Easing.exp 指数
       - 组合 Easing.in(Easingbouncee) 加速＋弹跳、Easing.out(Easing.exp) 减速＋指数、Easing.inOut(Easing.elastic(1)) 加减速+弹性 [查看组合效果](https://easings.net/#)
-  
+  - 矢量动画
+  ```javascript
+  export default () => {
+  const vector = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
+  return (<View>
+    <Button title='按钮' onPress={() => {
+      Animated.timing(vector, {
+        toValue: { x: 300, y: 500 },
+        durationn: 500,
+        useNativDriverr: false
+      }).start();
+    }} />
+    <Animated.View
+      style={[styles.view,
+        { marginLeft: vector.x, marginTop: vector.y }
+      ]}
+    />
+  </View>);
+  }
+  ```
+  - 四种组合公动画
+    
+
 
 
 ## 待更新
