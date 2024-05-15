@@ -326,7 +326,7 @@ nrm test taobao
 > 四大动画类型：平移、旋转、缩放、渐变
 - 平移：需要用 <Animated.View></Animated.View> 示例：
 ```javascript
-  export default () => {
+export default () => {
     const marginLeft = useRef(new Animated.Value(0)).current;
     return (<View>
       <Button title='按钮' onPress={() => {
@@ -346,7 +346,7 @@ nrm test taobao
 ```
 - 旋转示例：
 ```javascript
- export default () => {
+export default () => {
 const rotate = useRef(new Animated.Value(0)).current;
 const rotateValue = rotate.interpolate({
 inputRange: [0, 30],
@@ -413,7 +413,41 @@ return (<View>
 </View>);
 }
 ```
-- dsa
+- 支持动画的组件
+  - Animated.Image
+  - Animated.View
+  - Animated.ScrollView
+  - Animated.FlatList
+  - Animated.Text
+  - Animated.SectionList
+ - 平移动画的多重属性支持
+   - marginLeft, marginRight, marginTop, marginBottom
+   - translateX, translateY
+   - left, right, top, bottom
+- 三大动画函数
+  - Animated.decay（）：衰减动画函数
+    - velocity： 初始速度、deceleration：衰减系数，越小衰减越快
+    ```javascript
+    export default () => {
+        const marginLeft = useRef(new Animated.Value(0)).current;
+        return (<View>
+          <Button title='按钮' onPress={() => {
+            Animated.decay(marginLeft, {
+              velocity: 1,
+              deceleration: 0.999,
+              useNativDriverr: false
+            }).start();
+          }} />
+          <Animated.View
+            style={[styles.view,
+      { marginLeft: marginLeft }
+               ]}
+          />
+        </View>);
+       }
+    ```
+  - Animated.spring（）：弹性动画函数
+  - Animated.timing（）：时间动画函数
   
 
 
