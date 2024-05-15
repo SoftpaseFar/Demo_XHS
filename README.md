@@ -470,27 +470,27 @@ return (<View>
       - 三种标准函数 linear：一次方函数、quad： 二次方函数、cubic：三次方函数
       - 四种补充函数 [Easing.bezier (0,0,1,1)](https://cubic-bezier.com/)、Easing.circle 环形、Easing.sin 正弦、Easing.exp 指数
       - 组合 Easing.in(Easingbouncee) 加速＋弹跳、Easing.out(Easing.exp) 减速＋指数、Easing.inOut(Easing.elastic(1)) 加减速+弹性 [查看组合效果](https://easings.net/#)
-  - 矢量动画
-  ```javascript
-  export default () => {
-  const vector = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
-  return (<View>
-    <Button title='按钮' onPress={() => {
-      Animated.timing(vector, {
-        toValue: { x: 300, y: 500 },
-        durationn: 500,
-        useNativDriverr: false
-      }).start();
-    }} />
-    <Animated.View
-      style={[styles.view,
-        { marginLeft: vector.x, marginTop: vector.y }
-      ]}
-    />
-  </View>);
-  }
-  ```
-  - 四种组合公动画
+ - 矢量动画
+ ```javascript
+ export default () => {
+ const vector = useRef(new Animated.ValueXY({ x: 0, y: 0 })).current;
+ return (<View>
+   <Button title='按钮' onPress={() => {
+     Animated.timing(vector, {
+       toValue: { x: 300, y: 500 },
+       durationn: 500,
+       useNativDriverr: false
+     }).start();
+   }} />
+   <Animated.View
+     style={[styles.view,
+       { marginLeft: vector.x, marginTop: vector.y }
+     ]}
+   />
+ </View>);
+ }
+ ```
+ - 四种组合公动画
     
 
 
