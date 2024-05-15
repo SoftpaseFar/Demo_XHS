@@ -324,14 +324,14 @@ nrm test taobao
 - Keyboard：键盘操作有神器
 ## 动画系统
 > 四大动画类型：平移、旋转、缩放、渐变
-- 需要用 <Animated.View></Animated.View> 示例：
+- 平移：需要用 <Animated.View></Animated.View> 示例：
   ```javascript
      export default () => {
-       const marginLeft = useRef(new Animated.Value).current;
+       const marginLeft = useRef(new Animated.Value(0)).current;
        return (<View>
          <Button title='按钮' onPress={() => {
            Animated.timing(marginLeft, {
-             toValue: marginLeft,
+             toValue: 300,
              duration: 200,
              useNativDriverr: false
            }).start();
@@ -344,9 +344,77 @@ nrm test taobao
        </View>);
      }
   ```
+- 旋转示例：
+    ```javascript
+     export default () => {
+  const rotate = useRef(new Animated.Value(0)).current;
+  const rotateValue = rotate.interpolate({
+    inputRange: [0, 30],
+    outputRange: ['0deg', '30deg']
+  });
+  return (<View>
+    <Button title='按钮' onPress={() => {
+      Animated.timing(rotate, {
+        toValue: 30,
+        duration: 100,
+        useNativeDriver: false
+      }).start();
+    }} />
+    <Animated.View
+      style={[styles.view,
+        { transform: [{ rotate: rotateValue }] }
+      ]}
+    />
+  </View>);
+}
 
+  ```
+- 缩放示例：
+    ```javascript
 
+export default () => {
+  const scale = useRef(new Animated.Value(1)).current;
 
+  return (<View>
+    <Button title='按钮' onPress={() => {
+      Animated.timing(scale, {
+        toValue: 1.5,
+        duration: 100,
+        useNativeDriver: false
+      }).start();
+    }} />
+    <Animated.View
+      style={[styles.view,
+        { transform: [{ scale: scale }] }
+      ]}
+    />
+  </View>);
+}
+  ```
+- 渐变示例：
+  ```javascript
+  export default () => {
+  const opacity = useRef(new Animated.Value(1)).current;
+
+  return (<View>
+    <Button title='按钮' onPress={() => {
+      Animated.timing(opacity, {
+        toValue: 0.1,
+        duration: 1000,
+        useNativeDriver: false
+      }).start();
+    }} />
+    <Animated.View
+      style={[styles.view,
+        // { transform: [{ scale: scale }] },
+        { opacity: opacity }
+      ]}
+    />
+  </View>);
+}
+  ```
+  
+  
 
 
 ## 待更新
