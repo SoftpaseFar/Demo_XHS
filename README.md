@@ -539,5 +539,13 @@ return (<View>
 ## TypeScript
 [教程传送门](https://www.imooc.com/wiki/typescriptlesson)
 
+# 其他
+## Context解决的问题：
+>在一个典型的Reactt 应用中，数据是通过 props 属性逐层传递，这种做法对于某些数据而言是极其繁琐的（如：
+登陆信息，UI主题），这些数据应用中许多组件都需要；
+而Context 提供了一种在组件间共享值的方式，而不必显式地通过组件树逐层传递。
+
+
+
 
 ## 待更新
