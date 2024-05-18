@@ -537,7 +537,7 @@ return (<View>
    }
    ```
 ## TypeScript
-
+[教程传送门](https://www.imooc.com/wiki/typescriptlesson)
 
 
 ## 待更新
